@@ -1,0 +1,33 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms/11/attendance",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "studentId": 3,
+          "studentName": "学生3",
+          "studentAvatar": null,
+          "username": "20****71",
+          "totalTasks": 4,
+          "successCount": 4,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        }
+      ],
+      "timestamp": "2026-11-17T22:37:55.596224475"
+    }
+  },
+  "meta": {
+    "source": "live",
+    "recorded_at": "2026-11-17T14:37:54+00:00",
+    "desensitized": true
+  }
+}

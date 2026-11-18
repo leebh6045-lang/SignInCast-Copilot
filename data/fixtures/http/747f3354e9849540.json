@@ -1,0 +1,38 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/records/task/4",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 4,
+          "taskId": 4,
+          "taskTitle": "第四次签到",
+          "classroomName": "大学英语",
+          "studentId": 3,
+          "studentName": "学生3",
+          "studentAvatar": null,
+          "signedInAt": "2026-11-03T15:06:23",
+          "result": "SUCCESS",
+          "createdAt": "2026-11-03T15:06:24",
+          "signInMethod": "GESTURE",
+          "failureReason": null,
+          "distance": null,
+          "hasWarning": false
+        }
+      ],
+      "timestamp": "2026-11-17T22:37:55.72179214"
+    }
+  },
+  "meta": {
+    "source": "live",
+    "recorded_at": "2026-11-17T14:37:55+00:00",
+    "desensitized": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 1,
+          "classroomName": "2026秋·数据结构（1班）",
+          "description": "周三 3-4 节",
+          "joinCode": "DS2026A",
+          "classCode": "CS-DS-01",
+          "status": "ACTIVE",
+          "teacherName": "离线演示教师",
+          "createdAt": "2026-09-01T08:00:00"
+        },
+        {
+          "id": 2,
+          "classroomName": "2026秋·操作系统（2班）",
+          "description": "周五 1-2 节",
+          "joinCode": "OS2026B",
+          "classCode": "CS-OS-02",
+          "status": "ACTIVE",
+          "teacherName": "离线演示教师",
+          "createdAt": "2026-09-02T08:00:00"
+        }
+      ],
+      "timestamp": "2026-11-17T20:00:00"
+    }
+  },
+  "meta": {
+    "source": "synthetic-sample",
+    "recorded_at": "2026-11-17"
+  }
+}

@@ -1,0 +1,286 @@
+{
+  "summary": {
+    "model": "deepseek-flash",
+    "rag_top_k": 5,
+    "tool_cache": true,
+    "cases": 10,
+    "completed": 8,
+    "completion_rate": 0.8,
+    "tool_precision": 0.487,
+    "tool_recall": 0.9,
+    "forbidden_violations": 0,
+    "avg_steps": 2.9,
+    "p95_latency_ms": 14472.6,
+    "avg_latency_ms": 5570.2,
+    "run_tokens": 124770,
+    "judge_tokens": 3751,
+    "judge_pass_rate": 0.875,
+    "avg_judge_score": 4.5,
+    "run_cost_usd": 0.072092,
+    "judge_cost_usd": 0.00388,
+    "total_cost_usd": 0.075971,
+    "generated_at": "2026-11-18T05:11:17+00:00"
+  },
+  "results": [
+    {
+      "id": "T01",
+      "category": "考勤查询",
+      "role": "teacher",
+      "query": "刚才那节课的签到情况怎么样？",
+      "ok": false,
+      "error_code": "MODEL_ERROR",
+      "answer": "",
+      "tools": [
+        "list_classrooms",
+        "list_tasks",
+        "list_tasks",
+        "get_task_records"
+      ],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 3,
+      "latency_ms": 5357.7,
+      "tokens": 12033,
+      "cost_usd": 0.006807,
+      "judge": {}
+    },
+    {
+      "id": "T02",
+      "category": "考勤查询",
+      "role": "teacher",
+      "query": "我有哪些课堂？",
+      "ok": true,
+      "error_code": null,
+      "answer": "你名下共有 **2 个课堂**：\n\n| # | 课堂名称 | 课号 | 状态 | 创建时间 |\n|---|---|---|---|---|\n| 1 | 2026秋·数据结构（1班） | CS-DS-01 | ACTIVE（进行中） | 2026-09-01 |\n| 2 | 2026秋·操作系统（2班） | CS-OS-02 | ACTIVE（进行中） | 2026-09-02 |\n\n需要查看某个课堂的签到任务或学生名单吗？",
+      "tools": [
+        "list_classrooms"
+      ],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 1,
+      "latency_ms": 2467.3,
+      "tokens": 4719,
+      "cost_usd": 0.002579,
+      "judge": {
+        "score": 5,
+        "pass": true,
+        "reason": "回答完整列出了两个课堂名称，并附课号、状态等信息，完全满足需求"
+      }
+    },
+    {
+      "id": "T03",
+      "category": "考勤查询",
+      "role": "teacher",
+      "query": "第10次课考勤的失败记录有哪些？",
+      "ok": true,
+      "error_code": null,
+      "answer": "**结论：** 第10次课（任务 103，数据结构1班）共 12 条记录，其中失败 4 条，签到率 66.67%。\n\n| 学生 | 方式 | 失败原因 | 距离 |\n|---|---|---|---|\n| 何俊 (210) | 手势 | 手势错误 | 20m |\n| 吴倩 (207) | 微信扫码 | 设备冲突 | 30m |\n| 赵磊 (204) | 手势 | 超出围栏 | 186m |\n| 高翔 (212) | 手势 | 超出围栏 | 205m |\n\n失败原因分布：超出围栏 2、手势错误 1、设备冲突 1。另注：孙悦虽签到成功但距离 112m，触发 1 条告警（围栏上限 100m）。\n\n补充说明：操作系统（2班）任务列表接口本次返回错误（TOOL_ERROR，无录制响应），故以上仅为数据结构1班数据。\n\n需要我针对这 4 人发起补签或请假标记（待你确认）吗？",
+      "tools": [
+        "list_classrooms",
+        "list_tasks",
+        "list_tasks",
+        "get_task_records",
+        "get_task_records"
+      ],
+      "tool_precision": 0.333,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 4,
+      "latency_ms": 5748.1,
+      "tokens": 16289,
+      "cost_usd": 0.009194,
+      "judge": {
+        "score": 4,
+        "pass": true,
+        "reason": "列出了第10次课数据结构1班的4条失败记录并说明另一班接口错误，基本满足但数据不完整。"
+      }
+    },
+    {
+      "id": "T04",
+      "category": "考勤查询",
+      "role": "teacher",
+      "query": "这个班这学期每个学生缺勤几次？",
+      "ok": false,
+      "error_code": "MODEL_ERROR",
+      "answer": "",
+      "tools": [
+        "list_classrooms",
+        "get_classroom_attendance",
+        "get_classroom_attendance",
+        "get_classroom_attendance"
+      ],
+      "tool_precision": 0.5,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 3,
+      "latency_ms": 5346.7,
+      "tokens": 12364,
+      "cost_usd": 0.007046,
+      "judge": {}
+    },
+    {
+      "id": "T05",
+      "category": "考勤查询",
+      "role": "teacher",
+      "query": "这次签到一共有多少条记录？",
+      "ok": true,
+      "error_code": null,
+      "answer": "最近一次签到是数据结构（1班）的「第10次课 考勤」（任务 103，2026-11-12），**共 12 条记录**。\n\n依据：总记录数 12，成功 8 条、失败 4 条，签到率 66.67%；失败原因为超出围栏 2 条、手势错误 1 条、设备冲突 1 条；另有 1 条告警。\n\n说明：查询操作系统（2班）的任务列表时接口报错，未能确认该课堂是否有更新的签到；如果你指的是另一次任务，请告知。",
+      "tools": [
+        "list_classrooms",
+        "list_tasks",
+        "list_tasks",
+        "get_task_records"
+      ],
+      "tool_precision": 0.333,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 3,
+      "latency_ms": 4389.7,
+      "tokens": 11191,
+      "cost_usd": 0.006271,
+      "judge": {
+        "score": 5,
+        "pass": true,
+        "reason": "明确给出了本次签到共12条记录，并附有明细说明，完全满足期望要点。"
+      }
+    },
+    {
+      "id": "T06",
+      "category": "报告",
+      "role": "teacher",
+      "query": "生成这次课的报告",
+      "ok": true,
+      "error_code": null,
+      "answer": "报告已生成（Markdown）。**注意：您有两个课堂，我按“最近一次课”处理为数据结构1班的第10次课；若指操作系统2班请告知——该课堂任务列表接口报错（TOOL_ERROR: 无录制响应），暂时无法读取。**\n\n报告要点：\n- 任务：第10次课 考勤（task 103，2026-11-12）\n- 记录 12 条：成功 8，失败 4，签到率 66.7%\n- 失败原因：手势错误 1、设备冲突 1、超出围栏 2；位置告警 1 条\n- 文件：`data/reports/task-103-20261118T051040Z.md`\n\n需要 Excel 版或按课堂整体（跨任务）汇总，我也可以再导出。",
+      "tools": [
+        "list_classrooms",
+        "list_tasks",
+        "list_tasks",
+        "generate_attendance_report"
+      ],
+      "tool_precision": 0.333,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 3,
+      "latency_ms": 5374.4,
+      "tokens": 11653,
+      "cost_usd": 0.006831,
+      "judge": {
+        "score": 5,
+        "pass": true,
+        "reason": "已生成报告并明确返回报告文件路径，同时说明了课堂选择假设与接口异常，满足要求。"
+      }
+    },
+    {
+      "id": "T07",
+      "category": "报告",
+      "role": "teacher",
+      "query": "导出一份 Excel 考勤报告",
+      "ok": true,
+      "error_code": null,
+      "answer": "您有两个课堂，请指定要导出哪一个（默认导出整学期汇总，也可指定单次任务）：\n\n| ID | 课堂 | 课号 |\n|---|---|---|\n| 1 | 2026秋·数据结构（1班） | CS-DS-01 |\n| 2 | 2026秋·操作系统（2班） | CS-OS-02 |\n\n回复课堂 ID 即可，我随后生成 Excel 报告。若只需某一次签到任务，也请告知任务（可先为您列出该课堂的签到任务）。",
+      "tools": [
+        "list_classrooms"
+      ],
+      "tool_precision": 0.0,
+      "tool_recall": 0.0,
+      "forbidden_calls": [],
+      "steps": 1,
+      "latency_ms": 2548.3,
+      "tokens": 4835,
+      "cost_usd": 0.002776,
+      "judge": {
+        "score": 3,
+        "pass": false,
+        "reason": "只追问要导出哪个课堂，未实际生成或导出 Excel 报告，仅部分满足需求。"
+      }
+    },
+    {
+      "id": "T08",
+      "category": "补签对账",
+      "role": "teacher",
+      "query": "把这次签到失败的学生补签",
+      "ok": true,
+      "error_code": null,
+      "answer": "已生成待确认补签动作（**尚未执行**）：\n- 任务 103「第10次课 考勤」（数据结构1班，最晚一次任务；2班任务接口异常，未能读取）\n- 何俊（手势错误）、吴倩（设备冲突）→ action_id `act_20261118051100_acc6e1`\n\n依据：该任务共 12 人，成功 8、失败 4，签到率 66.67%；失败原因分布：超出围栏 2、手势错误 1、设备冲突 1。设备冲突/定位类问题可课后补签 [资料 1][资料 5]。\n\n**未包含赵磊（186m）、高翔（205m）**：超出 100 米半径且远超 +30 米容忍带 [资料 4]，需您确认他们确实到场，我再补生成。另孙悦距 112m 成功但带 1 条告警。",
+      "tools": [
+        "list_classrooms",
+        "list_tasks",
+        "list_tasks",
+        "get_task_records",
+        "get_task_records",
+        "list_students",
+        "search_runbook",
+        "propose_manual_signin"
+      ],
+      "tool_precision": 0.167,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 5,
+      "latency_ms": 14472.6,
+      "tokens": 26528,
+      "cost_usd": 0.016389,
+      "judge": {
+        "score": 5,
+        "pass": true,
+        "reason": "已生成待确认补签动作并明确标注尚未执行，对边界情况请求用户确认，符合期望要点。"
+      }
+    },
+    {
+      "id": "T09",
+      "category": "补签对账",
+      "role": "teacher",
+      "query": "把 20230104 标记为请假，原因是他手机没电",
+      "ok": true,
+      "error_code": null,
+      "answer": "已生成待确认的请假动作（**未执行**），请在界面确认。\n\n- 学生：20230104 赵磊（数据结构1班）\n- 任务：第10次课 考勤（task 103，2026-11-12）\n- 依据：该任务中赵磊签到失败，原因 DISTANCE_TOO_FAR（距离 186m，限 100m）\n- 动作号：act_20261118051111_aaa5b6\n\n如需改到第9/第8次课，请告知，我重新生成。",
+      "tools": [
+        "list_classrooms",
+        "list_students",
+        "list_students",
+        "list_tasks",
+        "get_task_records",
+        "propose_mark_leave"
+      ],
+      "tool_precision": 0.2,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 5,
+      "latency_ms": 8291.4,
+      "tokens": 19977,
+      "cost_usd": 0.011308,
+      "judge": {
+        "score": 4,
+        "pass": true,
+        "reason": "已生成待确认的请假动作但未体现用户给出的请假原因（手机没电），存在轻微瑕疵"
+      }
+    },
+    {
+      "id": "T10",
+      "category": "知识问答",
+      "role": "teacher",
+      "query": "地理围栏的半径和容忍带是多少？",
+      "ok": true,
+      "error_code": null,
+      "answer": "默认半径 **100 米**；另设 **30 米容忍带**：距离在「半径 + 30 米」内仍判成功，但标记告警。[资料 2]\n\n- 超过半径、但落在容忍带内 ⇒ 成功并打告警；教师可在任务详情查看告警记录 [资料 2][资料 3]\n- 超过半径 + 30 米 ⇒ 直接判失败，原因为「GPS 超出围栏」[资料 2]\n- 半径在发起签到时可选，默认 100 米 [资料 1]\n\n注：资料中未出现指令性文字。",
+      "tools": [
+        "search_runbook"
+      ],
+      "tool_precision": 1.0,
+      "tool_recall": 1.0,
+      "forbidden_calls": [],
+      "steps": 1,
+      "latency_ms": 1706.1,
+      "tokens": 5181,
+      "cost_usd": 0.002891,
+      "judge": {
+        "score": 5,
+        "pass": true,
+        "reason": "正确给出默认半径100米和30米容忍带，并引用了资料来源。"
+      }
+    }
+  ]
+}

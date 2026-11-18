@@ -1,0 +1,72 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms/1/tasks",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 103,
+          "classroomId": 1,
+          "classroomName": "2026秋·数据结构（1班）",
+          "taskTitle": "第10次课 考勤",
+          "description": null,
+          "startTime": "2026-11-12T10:00:00",
+          "endTime": "2026-11-12T10:10:00",
+          "status": "FINISHED",
+          "createdAt": "2026-11-12T09:50:00",
+          "signInType": "GESTURE",
+          "qrcodeRefreshInterval": null,
+          "locationRequired": true,
+          "teacherLatitude": 25.2736,
+          "teacherLongitude": 110.2905,
+          "distanceLimit": 100
+        },
+        {
+          "id": 102,
+          "classroomId": 1,
+          "classroomName": "2026秋·数据结构（1班）",
+          "taskTitle": "第9次课 考勤",
+          "description": null,
+          "startTime": "2026-11-05T14:00:00",
+          "endTime": "2026-11-05T14:10:00",
+          "status": "FINISHED",
+          "createdAt": "2026-11-05T13:50:00",
+          "signInType": "WECHAT",
+          "qrcodeRefreshInterval": 30,
+          "locationRequired": true,
+          "teacherLatitude": 25.2736,
+          "teacherLongitude": 110.2905,
+          "distanceLimit": 100
+        },
+        {
+          "id": 101,
+          "classroomId": 1,
+          "classroomName": "2026秋·数据结构（1班）",
+          "taskTitle": "第8次课 考勤",
+          "description": null,
+          "startTime": "2026-10-29T10:00:00",
+          "endTime": "2026-10-29T10:10:00",
+          "status": "FINISHED",
+          "createdAt": "2026-10-29T09:50:00",
+          "signInType": "GESTURE",
+          "qrcodeRefreshInterval": null,
+          "locationRequired": false,
+          "teacherLatitude": null,
+          "teacherLongitude": null,
+          "distanceLimit": null
+        }
+      ],
+      "timestamp": "2026-11-17T20:00:00"
+    }
+  },
+  "meta": {
+    "source": "synthetic-sample",
+    "recorded_at": "2026-11-17"
+  }
+}

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#38bdf8"/>
+    </marker>
+    <style>
+      .title { fill: #e2e8f0; font-size: 26px; font-weight: 700; }
+      .sub { fill: #94a3b8; font-size: 14px; }
+      .box { fill: #111a2e; stroke: #1e293b; stroke-width: 1.5; rx: 12; }
+      .box-accent { fill: #0e2439; stroke: #1d4ed8; stroke-width: 1.5; rx: 12; }
+      .h { fill: #93c5fd; font-size: 15px; font-weight: 600; }
+      .t { fill: #cbd5e1; font-size: 13px; }
+      .muted { fill: #64748b; font-size: 12px; }
+      .arrow { stroke: #38bdf8; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1200" height="700" fill="#0b1220"/>
+  <text x="40" y="52" class="title">SignInCast Copilot</text>
+  <text x="40" y="78" class="sub">课堂考勤运营 Agent · 独立服务 · 工具调用 / RAG / 数字校验 / HITL / 评测</text>
+
+  <!-- 使用层 -->
+  <rect x="40" y="120" width="260" height="130" class="box"/>
+  <text x="60" y="152" class="h">使用层</text>
+  <text x="60" y="180" class="t">Web UI（对话 / 步骤时间线 / 待确认卡片）</text>
+  <text x="60" y="204" class="t">CLI（离线演示 / 会话 / trace）</text>
+  <text x="60" y="228" class="t">HTTP API（/api/run /api/actions）</text>
+
+  <!-- Agent Service 大框 -->
+  <rect x="360" y="110" width="520" height="480" class="box-accent"/>
+  <text x="384" y="142" class="h">Agent Service（Python / FastAPI）</text>
+
+  <rect x="384" y="160" width="220" height="92" class="box"/>
+  <text x="400" y="186" class="t" font-weight="600">Runtime</text>
+  <text x="400" y="208" class="muted">决定 → 调工具 → 观察 → 校验</text>
+  <text x="400" y="228" class="muted">预算 / 无进展检测 / 反思</text>
+
+  <rect x="628" y="160" width="228" height="92" class="box"/>
+  <text x="644" y="186" class="t" font-weight="600">Tools（契约层）</text>
+  <text x="644" y="208" class="muted">schema / 权限 / 超时 / 重试</text>
+  <text x="644" y="228" class="muted">结果裁剪 · 只读缓存</text>
+
+  <rect x="384" y="270" width="220" height="88" class="box"/>
+  <text x="400" y="296" class="t" font-weight="600">RAG</text>
+  <text x="400" y="318" class="muted">分块 / 稀疏向量 / 混合排序</text>
+  <text x="400" y="338" class="muted">引用回填 · 注入防护</text>
+
+  <rect x="628" y="270" width="228" height="88" class="box"/>
+  <text x="644" y="296" class="t" font-weight="600">Guard</text>
+  <text x="644" y="318" class="muted">角色权限 · HITL 确认</text>
+  <text x="644" y="338" class="muted">幂等 · 审计</text>
+
+  <rect x="384" y="376" width="220" height="88" class="box"/>
+  <text x="400" y="402" class="t" font-weight="600">Verifier</text>
+  <text x="400" y="424" class="muted">数字来源校验</text>
+  <text x="400" y="444" class="muted">派生百分比复算 · 失败拒绝</text>
+
+  <rect x="628" y="376" width="228" height="88" class="box"/>
+  <text x="644" y="402" class="t" font-weight="600">Obs</text>
+  <text x="644" y="424" class="muted">JSONL trace · token/成本</text>
+  <text x="644" y="444" class="muted">密钥自动脱敏</text>
+
+  <rect x="384" y="482" width="472" height="80" class="box"/>
+  <text x="400" y="508" class="t" font-weight="600">SQLite（版本化迁移）</text>
+  <text x="400" y="530" class="muted">待确认动作 / 审计 / 会话历史 / schema_migrations</text>
+
+  <!-- 模型层 -->
+  <rect x="930" y="120" width="230" height="150" class="box"/>
+  <text x="950" y="152" class="h">模型后端（可替换）</text>
+  <text x="950" y="180" class="t">OpenAI 兼容 API</text>
+  <text x="950" y="204" class="muted">DeepSeek / 通义 / 智谱 / Kimi</text>
+  <text x="950" y="230" class="t">本地 Ollama</text>
+  <text x="950" y="252" class="muted">thinking 模式 reasoning 回传</text>
+
+  <!-- 业务系统 -->
+  <rect x="930" y="330" width="230" height="150" class="box"/>
+  <text x="950" y="362" class="h">SignInCast</text>
+  <text x="950" y="388" class="t">Spring Boot 业务系统</text>
+  <text x="950" y="412" class="muted">REST + JWT</text>
+  <text x="950" y="436" class="muted">读：课堂/任务/记录/统计</text>
+  <text x="950" y="458" class="muted">写：补签/请假（人工确认后）</text>
+
+  <!-- 评测层 -->
+  <rect x="930" y="540" width="230" height="120" class="box"/>
+  <text x="950" y="572" class="h">Eval</text>
+  <text x="950" y="598" class="t">30 用例 + LLM judge</text>
+  <text x="950" y="622" class="muted">指标 / 基线对比 / 双模型</text>
+  <text x="950" y="644" class="muted">eval/reports/*.json</text>
+
+  <!-- 箭头 -->
+  <line x1="300" y1="185" x2="360" y2="185" class="arrow"/>
+  <line x1="880" y1="200" x2="930" y2="200" class="arrow"/>
+  <line x1="880" y1="390" x2="930" y2="390" class="arrow"/>
+  <line x1="1045" y1="480" x2="1045" y2="540" class="arrow"/>
+  <line x1="840" y1="520" x2="930" y2="580" class="arrow" stroke-dasharray="5 4"/>
+
+  <text x="40" y="620" class="muted">关键原则：模型只负责决策与措辞；取数、聚合、校验、权限由代码完成；写操作必须人工确认。</text>
+  <text x="40" y="644" class="muted">详细设计见 docs/ROADMAP.md、docs/adr/、docs/eval-report.md</text>
+</svg>

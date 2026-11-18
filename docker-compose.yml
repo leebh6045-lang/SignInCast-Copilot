@@ -1,0 +1,39 @@
+services:
+  copilot:
+    build: .
+    image: signincast-copilot:local
+    container_name: signincast-copilot
+    env_file:
+      - .env
+    environment:
+      # 容器内统一把数据写进挂载目录，方便持久化与备份
+      COPILOT_DB_PATH: /app/data/copilot.db
+      COPILOT_TRACE_DIR: /app/data/traces
+      COPILOT_REPORT_DIR: /app/data/reports
+      COPILOT_SIGNINCAST_FIXTURES_DIR: /app/data/fixtures/http-sample
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  # 可选：本地模型后端。默认不启动，用 --profile ollama 开启。
+  # 启动后把 .env 的 COPILOT_LLM_BASE_URL 改为 http://ollama:11434/v1
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["ollama"]
+    container_name: signincast-copilot-ollama
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - ollama-models:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama-models:

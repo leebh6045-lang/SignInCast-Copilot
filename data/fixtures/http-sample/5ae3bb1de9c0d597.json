@@ -1,0 +1,81 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms/1/students",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 201,
+          "username": "20230101",
+          "name": "陈晓"
+        },
+        {
+          "id": 202,
+          "username": "20230102",
+          "name": "李明"
+        },
+        {
+          "id": 203,
+          "username": "20230103",
+          "name": "王芳"
+        },
+        {
+          "id": 204,
+          "username": "20230104",
+          "name": "赵磊"
+        },
+        {
+          "id": 205,
+          "username": "20230105",
+          "name": "孙悦"
+        },
+        {
+          "id": 206,
+          "username": "20230106",
+          "name": "周涛"
+        },
+        {
+          "id": 207,
+          "username": "20230107",
+          "name": "吴倩"
+        },
+        {
+          "id": 208,
+          "username": "20230108",
+          "name": "郑浩"
+        },
+        {
+          "id": 209,
+          "username": "20230109",
+          "name": "冯雪"
+        },
+        {
+          "id": 210,
+          "username": "20230110",
+          "name": "何俊"
+        },
+        {
+          "id": 211,
+          "username": "20230111",
+          "name": "许琳"
+        },
+        {
+          "id": 212,
+          "username": "20230112",
+          "name": "高翔"
+        }
+      ],
+      "timestamp": "2026-11-17T20:00:00"
+    }
+  },
+  "meta": {
+    "source": "synthetic-sample",
+    "recorded_at": "2026-11-17"
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SignInCast Copilot</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>SignInCast Copilot</h1>
+    <p class="hint">课堂考勤运营 Agent · 本地演示（离线 mock 数据 + 规则决策模型）</p>
+  </header>
+  <main>
+    <section class="card chat">
+      <div class="controls">
+        <input id="query" value="刚才那节课的签到情况怎么样？" />
+        <select id="role">
+          <option value="teacher">教师</option>
+          <option value="student">学生</option>
+        </select>
+        <button id="send">发送</button>
+      </div>
+      <div id="status" class="status"></div>
+      <div id="answer" class="answer"></div>
+      <h2>执行步骤</h2>
+      <ol id="steps" class="steps"></ol>
+      <div id="usage" class="usage"></div>
+    </section>
+
+    <section class="card actions">
+      <div class="section-head">
+        <h2>待确认动作</h2>
+        <button id="refresh" class="ghost">刷新</button>
+      </div>
+      <p class="hint">模型只能提议；点“确认”后才允许执行，执行会走真实写接口（mock 模式下会被拒绝）。</p>
+      <div id="action-list"></div>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

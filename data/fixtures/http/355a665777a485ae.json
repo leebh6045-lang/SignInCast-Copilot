@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms/12/students",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [],
+      "timestamp": "2026-11-17T22:37:55.041539509"
+    }
+  },
+  "meta": {
+    "source": "live",
+    "recorded_at": "2026-11-17T14:37:54+00:00",
+    "desensitized": true
+  }
+}

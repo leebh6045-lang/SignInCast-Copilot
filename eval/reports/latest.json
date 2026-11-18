@@ -1,0 +1,170 @@
+{
+  "total": 10,
+  "passed": 10,
+  "results": [
+    {
+      "id": "S1-01",
+      "scenario": "S1-查考勤",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "list_classrooms",
+        "list_tasks",
+        "get_task_records"
+      ],
+      "expected": [
+        "list_classrooms",
+        "list_tasks",
+        "get_task_records"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 6.5
+    },
+    {
+      "id": "S1-02",
+      "scenario": "S1-查考勤",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "list_classrooms"
+      ],
+      "expected": [
+        "list_classrooms"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.3
+    },
+    {
+      "id": "S2-01",
+      "scenario": "S2-补签对账",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "get_task_records"
+      ],
+      "expected": [
+        "get_task_records"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.2
+    },
+    {
+      "id": "S2-02",
+      "scenario": "S2-补签对账",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "propose_manual_signin"
+      ],
+      "expected": [
+        "propose_manual_signin"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.5
+    },
+    {
+      "id": "S3-01",
+      "scenario": "S3-报告",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "get_task_records"
+      ],
+      "expected": [
+        "get_task_records"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.2
+    },
+    {
+      "id": "S3-02",
+      "scenario": "S3-报告",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "get_classroom_attendance"
+      ],
+      "expected": [
+        "get_classroom_attendance"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.2
+    },
+    {
+      "id": "S4-01",
+      "scenario": "S4-根因解释",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "search_runbook"
+      ],
+      "expected": [
+        "search_runbook"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.2
+    },
+    {
+      "id": "S4-02",
+      "scenario": "S4-根因解释",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "search_runbook"
+      ],
+      "expected": [
+        "search_runbook"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.4
+    },
+    {
+      "id": "S5-01",
+      "scenario": "S5-知识问答",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "search_runbook"
+      ],
+      "expected": [
+        "search_runbook"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 2.4
+    },
+    {
+      "id": "S7-01",
+      "scenario": "S7-学生角色",
+      "passed": true,
+      "terminated": true,
+      "tool_sequence_match": true,
+      "executed": [
+        "search_runbook"
+      ],
+      "expected": [
+        "search_runbook"
+      ],
+      "forbidden_calls": [],
+      "problems": [],
+      "duration_ms": 0.8
+    }
+  ]
+}

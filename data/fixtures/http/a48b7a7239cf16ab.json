@@ -1,0 +1,38 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/records/task/6",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 6,
+          "taskId": 6,
+          "taskTitle": "第二次签到",
+          "classroomName": "高等数学a2",
+          "studentId": 3,
+          "studentName": "学生3",
+          "studentAvatar": null,
+          "signedInAt": "2026-11-03T15:21:13",
+          "result": "SUCCESS",
+          "createdAt": "2026-11-03T15:21:13",
+          "signInMethod": "WECHAT_SCAN",
+          "failureReason": null,
+          "distance": null,
+          "hasWarning": false
+        }
+      ],
+      "timestamp": "2026-11-17T22:37:54.760459487"
+    }
+  },
+  "meta": {
+    "source": "live",
+    "recorded_at": "2026-11-17T14:37:54+00:00",
+    "desensitized": true
+  }
+}

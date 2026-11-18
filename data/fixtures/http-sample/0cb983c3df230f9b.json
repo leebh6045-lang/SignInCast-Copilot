@@ -1,0 +1,153 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms/1/attendance",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "studentId": 201,
+          "studentName": "陈晓",
+          "studentAvatar": null,
+          "username": "20230101",
+          "totalTasks": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 202,
+          "studentName": "李明",
+          "studentAvatar": null,
+          "username": "20230102",
+          "totalTasks": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 203,
+          "studentName": "王芳",
+          "studentAvatar": null,
+          "username": "20230103",
+          "totalTasks": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 204,
+          "studentName": "赵磊",
+          "studentAvatar": null,
+          "username": "20230104",
+          "totalTasks": 3,
+          "successCount": 1,
+          "failureCount": 2,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 205,
+          "studentName": "孙悦",
+          "studentAvatar": null,
+          "username": "20230105",
+          "totalTasks": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 206,
+          "studentName": "周涛",
+          "studentAvatar": null,
+          "username": "20230106",
+          "totalTasks": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 207,
+          "studentName": "吴倩",
+          "studentAvatar": null,
+          "username": "20230107",
+          "totalTasks": 3,
+          "successCount": 1,
+          "failureCount": 1,
+          "leaveCount": 1,
+          "absentCount": 0
+        },
+        {
+          "studentId": 208,
+          "studentName": "郑浩",
+          "studentAvatar": null,
+          "username": "20230108",
+          "totalTasks": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 209,
+          "studentName": "冯雪",
+          "studentAvatar": null,
+          "username": "20230109",
+          "totalTasks": 3,
+          "successCount": 2,
+          "failureCount": 1,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 210,
+          "studentName": "何俊",
+          "studentAvatar": null,
+          "username": "20230110",
+          "totalTasks": 3,
+          "successCount": 1,
+          "failureCount": 1,
+          "leaveCount": 0,
+          "absentCount": 1
+        },
+        {
+          "studentId": 211,
+          "studentName": "许琳",
+          "studentAvatar": null,
+          "username": "20230111",
+          "totalTasks": 3,
+          "successCount": 3,
+          "failureCount": 0,
+          "leaveCount": 0,
+          "absentCount": 0
+        },
+        {
+          "studentId": 212,
+          "studentName": "高翔",
+          "studentAvatar": null,
+          "username": "20230112",
+          "totalTasks": 3,
+          "successCount": 1,
+          "failureCount": 2,
+          "leaveCount": 0,
+          "absentCount": 0
+        }
+      ],
+      "timestamp": "2026-11-17T20:00:00"
+    }
+  },
+  "meta": {
+    "source": "synthetic-sample",
+    "recorded_at": "2026-11-17"
+  }
+}

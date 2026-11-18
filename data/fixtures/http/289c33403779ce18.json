@@ -1,0 +1,52 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 13,
+          "classroomName": "高等数学a2",
+          "description": "",
+          "joinCode": "****",
+          "classCode": "class1102958",
+          "status": "ACTIVE",
+          "teacherName": "教师",
+          "createdAt": "2026-11-03T15:19:05"
+        },
+        {
+          "id": 12,
+          "classroomName": "高等数学",
+          "description": "",
+          "joinCode": "****",
+          "classCode": "class1102892",
+          "status": "ACTIVE",
+          "teacherName": "教师",
+          "createdAt": "2026-11-03T15:07:14"
+        },
+        {
+          "id": 11,
+          "classroomName": "大学英语",
+          "description": "",
+          "joinCode": "****",
+          "classCode": "class1102684",
+          "status": "ACTIVE",
+          "teacherName": "教师",
+          "createdAt": "2026-11-03T13:41:35"
+        }
+      ],
+      "timestamp": "2026-11-17T22:37:54.201694165"
+    }
+  },
+  "meta": {
+    "source": "live",
+    "recorded_at": "2026-11-17T14:37:53+00:00",
+    "desensitized": true
+  }
+}

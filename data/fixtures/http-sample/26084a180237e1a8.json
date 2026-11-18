@@ -1,0 +1,53 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/records/my",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 6001,
+          "taskId": 103,
+          "taskTitle": "第10次课 考勤",
+          "classroomName": "2026秋·数据结构（1班）",
+          "studentId": 201,
+          "studentName": "陈晓",
+          "studentAvatar": null,
+          "signedInAt": "2026-11-12T10:01:00",
+          "result": "SUCCESS",
+          "createdAt": "2026-11-12T10:01:00",
+          "signInMethod": "GESTURE",
+          "failureReason": null,
+          "distance": 12,
+          "hasWarning": false
+        },
+        {
+          "id": 6002,
+          "taskId": 102,
+          "taskTitle": "第9次课 考勤",
+          "classroomName": "2026秋·数据结构（1班）",
+          "studentId": 201,
+          "studentName": "陈晓",
+          "studentAvatar": null,
+          "signedInAt": "2026-11-05T14:02:00",
+          "result": "FAILURE",
+          "createdAt": "2026-11-05T14:02:00",
+          "signInMethod": "WECHAT_SCAN",
+          "failureReason": "DISTANCE_TOO_FAR",
+          "distance": 220,
+          "hasWarning": false
+        }
+      ],
+      "timestamp": "2026-11-17T20:00:00"
+    }
+  },
+  "meta": {
+    "source": "synthetic-sample",
+    "recorded_at": "2026-11-17"
+  }
+}

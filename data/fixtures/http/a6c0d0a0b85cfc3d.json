@@ -1,0 +1,56 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms/13/tasks",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 6,
+          "classroomId": 13,
+          "classroomName": "高等数学a2",
+          "taskTitle": "第二次签到",
+          "description": "",
+          "startTime": "2026-11-03T15:20:52",
+          "endTime": "2026-11-03T15:25:52",
+          "status": "ACTIVE",
+          "createdAt": "2026-11-03T15:20:54",
+          "signInType": "WECHAT",
+          "qrcodeRefreshInterval": 20,
+          "locationRequired": false,
+          "teacherLatitude": null,
+          "teacherLongitude": null,
+          "distanceLimit": null
+        },
+        {
+          "id": 5,
+          "classroomId": 13,
+          "classroomName": "高等数学a2",
+          "taskTitle": "第一次签到",
+          "description": "",
+          "startTime": "2026-11-03T15:19:57",
+          "endTime": "2026-11-03T15:24:57",
+          "status": "ACTIVE",
+          "createdAt": "2026-11-03T15:19:59",
+          "signInType": "GESTURE",
+          "qrcodeRefreshInterval": null,
+          "locationRequired": false,
+          "teacherLatitude": null,
+          "teacherLongitude": null,
+          "distanceLimit": null
+        }
+      ],
+      "timestamp": "2026-11-17T22:37:54.346508912"
+    }
+  },
+  "meta": {
+    "source": "live",
+    "recorded_at": "2026-11-17T14:37:53+00:00",
+    "desensitized": true
+  }
+}

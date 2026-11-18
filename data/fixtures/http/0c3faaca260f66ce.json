@@ -1,0 +1,27 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/classrooms/11/students",
+    "params": {}
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "code": 200,
+      "message": "success",
+      "data": [
+        {
+          "id": 3,
+          "username": "20****71",
+          "name": "学生3"
+        }
+      ],
+      "timestamp": "2026-11-17T22:37:55.466695913"
+    }
+  },
+  "meta": {
+    "source": "live",
+    "recorded_at": "2026-11-17T14:37:54+00:00",
+    "desensitized": true
+  }
+}
