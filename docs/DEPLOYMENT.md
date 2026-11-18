@@ -30,7 +30,7 @@ curl -s localhost:8000/health
 - `./data` 挂载进容器：fixtures / SQLite / 报告 / trace 都在宿主机可见
 - 非 root 用户运行（uid 10001）
 - 内置 `HEALTHCHECK`，`docker compose ps` 可看健康状态
-- **本机 Docker 未安装，镜像未在本机构建验证**；Dockerfile 与 compose 按标准写法提供，部署前请先 `docker build` 验证一次
+- 已在本机验证：Docker Desktop aarch64 + Compose v5.7，镜像约 238MB，健康检查/UI/容器内 CLI/真实模型调用均通过（2026-11-18）；其他环境首次部署仍建议先 `docker compose build` 验证
 
 ### 可选：本地模型（Ollama）
 

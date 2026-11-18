@@ -106,7 +106,7 @@ docker compose up -d
 curl -s localhost:8000/health
 ```
 
-> 本机未安装 Docker，以上未在本机构建验证；部署前请先 `docker compose build` 跑一次。
+> 已在本机验证（Docker Desktop aarch64 / Compose v5.7）：镜像构建、健康检查、Web UI、容器内 CLI、真实模型调用均通过（2026-11-18）。
 
 ## 演示
 

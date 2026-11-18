@@ -1,22 +1,35 @@
+# Python / 虚拟环境
 .venv/
 __pycache__/
 *.py[cod]
+*.egg-info/
+build/
+dist/
+
+# 本地配置与密钥（.env.example 需要提交）
 .env
+.env.local
+.env.*.local
+
+# IDE / 编辑器
+.idea/
+.vscode/
+*.iml
+.DS_Store
+
+# 运行时产物
 traces/
 logs/
+data/traces/
+data/reports/
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/fixtures/*.local.json
+
+# 测试 / 评测临时文件
 .pytest_cache/
 .ruff_cache/
 .mypy_cache/
-dist/
-build/
-*.egg-info/
-.DS_Store
-data/fixtures/*.local.json
-data/*.db
-data/reports/
-data/*.db
-data/reports/-wal
-data/*.db
-data/reports/-shm
 eval/reports/*.log
 eval/reports/scratch/
